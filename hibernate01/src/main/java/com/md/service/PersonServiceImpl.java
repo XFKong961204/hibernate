@@ -40,6 +40,11 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
+    public List<Person> selectPersonByName(String name) {
+        return personRepository.queryAllByName(name);
+    }
+
+    @Override
     @Transactional
     public void deletePerson(int id) {
         personRepository.deleteById(id);
