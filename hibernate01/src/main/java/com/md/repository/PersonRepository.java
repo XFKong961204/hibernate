@@ -18,4 +18,6 @@ public interface PersonRepository extends JpaRepository<Person,String> {
 
     @Query("from Person p where p.name=name")
     public List<Person> queryAllByName(@Param("name") String name);
+
+
 }
